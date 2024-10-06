@@ -1,0 +1,14 @@
+
+.note {
+    border: 1px solid #000;
+    width: 20vh;
+    height: 25vh;
+    position: fixed;
+    /* for safari and ios */
+    -webkit-user-select: none; 
+    user-select: none;
+}
+.note.active {
+    z-index: 9999;
+    border: 2px solid #000;   
+}
