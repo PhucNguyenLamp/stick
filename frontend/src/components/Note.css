@@ -7,6 +7,30 @@
     /* for safari and ios */
     -webkit-user-select: none; 
     user-select: none;
+    /* padding: 1vh; */
+}
+.header {
+    font-weight: bold;
+    padding: 0 1vh;
+}
+.message {
+    padding: 0 1vh;
+}
+.delete {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    padding: 1vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.delete:hover {
+    background-color: rgb(232, 0, 0);
+    color: white;
 }
 .note.active {
     z-index: 9999;
