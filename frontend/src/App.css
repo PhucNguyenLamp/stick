@@ -1,3 +1,8 @@
+.background {
+    background-color: #fff5f4;
+    height: 100vh;
+}
+
 .add {
     background-color: rgb(83, 180, 224);
     border-radius: 50%;
@@ -6,4 +11,8 @@
     position: absolute;
     right: 12px;
     bottom: 12px;
+}
+.add:hover {
+    background-color: rgb(74, 157, 196);
+    cursor: pointer;
 }
