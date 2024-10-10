@@ -8,7 +8,7 @@ function App() {
   const [activeNote, setActiveNote] = React.useState(null);
   
   const fetchNotes = async () => {
-    const response = await fetch('http://localhost:4000/api/notes');
+    const response = await fetch('https://frontend-misty-meadow-4069.fly.dev/api/notes');
     const data = await response.json();
     setNotes(data);
   }
@@ -44,7 +44,7 @@ function App() {
       color: generateTintedWhiteColor(0.2),
     }
     console.log('adding note')
-    await fetch('http://localhost:4000/api/note', {
+    await fetch('https://frontend-misty-meadow-4069.fly.dev/api/note', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ function App() {
   }
   const sendNotePosition = async (noteId, x, y) => {
     console.log(`sending note ${noteId} position`)
-    await fetch(`http://localhost:4000/api/note/${noteId}`, {
+    await fetch(`https://frontend-misty-meadow-4069.fly.dev/api/note/${noteId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ function App() {
   }
 
   const updateNoteContent = async (id, header, message) => {
-    await fetch(`http://localhost:4000/api/note/${id}`, {
+    await fetch(`https://frontend-misty-meadow-4069.fly.dev/api/note/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ function App() {
   }
 
   const deleteNote = async (id) => {
-    await fetch(`http://localhost:4000/api/note/${id}`, {
+    await fetch(`https://frontend-misty-meadow-4069.fly.dev/api/note/${id}`, {
       method: 'DELETE',
     })
     console.log(`deleting note ${id}`)
